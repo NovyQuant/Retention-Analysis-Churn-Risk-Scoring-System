@@ -1,0 +1,15 @@
+# --- DANE (Tego nie wysyłamy!) ---
+*.csv
+*.xlsx
+*.xls
+data/
+
+# --- Śmieci systemowe Pythona ---
+__pycache__/
+*.py[cod]
+
+# --- Śmieci z Jupytera ---
+.ipynb_checkpoints/
+
+# --- Konfiguracja VS Code ---
+.vscode/
