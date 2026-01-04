@@ -1,9 +1,9 @@
-# --- Śmieci systemowe Pythona ---
+# --- Python trash ---
 __pycache__/
 *.py[cod]
 
-# --- Śmieci z Jupytera ---
+# --- Jupyter trash ---
 .ipynb_checkpoints/
 
-# --- Konfiguracja VS Code ---
+# --- Config VS Code ---
 .vscode/
