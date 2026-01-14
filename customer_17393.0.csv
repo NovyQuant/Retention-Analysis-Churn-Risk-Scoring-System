@@ -1,0 +1,4 @@
+Customer ID,Recency,Frequency,Monetary,Unique_Products,Tenure,AOV,Product_Variety_Score,Monetary_Trend,Frequency_Trend,Return_Rate,IsUK,Avg_Gap,Gap_Std,Gap_Trend,Latency_Risk,Churn,Cutoff_Date
+17393.0,68,2,381.15,45,146,190.575,22.5,0.9588445807770961,1.0,0.0,1,77.0,0.0,1.0,0.8717948717948718,1,2011-01-01
+17393.0,158,2,381.15,45,236,190.575,22.5,0.0,0.0,0.0,1,77.0,0.0,1.0,2.0256410256410255,1,2011-04-01
+17393.0,219,2,381.15,45,297,190.575,22.5,0.0,0.0,0.0,1,77.0,0.0,1.0,2.8076923076923075,1,2011-06-01
