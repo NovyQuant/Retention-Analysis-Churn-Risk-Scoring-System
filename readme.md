@@ -1,18 +1,40 @@
-Project: Retention Analysis and Churn Prediction in E-commerce Developed a machine learning model (Random Forest) to identify customers at risk of churning.
+Project: Retention Analysis & Churn Risk Scoring System
+Objective: Developed an end-to-end machine learning pipeline to predict customer churn in e-commerce, focusing on probability calibration and risk ranking to optimize retention budget allocation.
 
-Innovation: Replaced rigid Churn definitions (e.g., 90 days) with a dynamic threshold based on individual customer Inter-Purchase Time.
+Methodology & Innovation:
 
-Feature Engineering: Engineered variables describing trend dynamics (activity increase/decrease) and behavioral indicators (RFM, returns, basket diversity).
+Walk-Forward Validation: Implemented a rigorous time-series cross-validation strategy (training on historical windows, testing on future "Out-of-Time" data) to prevent data leakage and simulate real-world deployment scenarios.
 
-Result: Achieved an F1-Score of 93%. The project culminated in a financial report estimating the annualized value of revenue at risk (LTV modeling) and segmenting the customer base into risk groups.
+Probability Calibration: Applied Isotonic Regression (Random Forest) and Sigmoid Scaling (Logistic Regression/KNN) to transform raw model outputs into accurate churn probabilities, essential for calculating financial risk (Expected Loss).
 
-Technologies: Python, Scikit-learn, Pandas.
+Leakage Prevention: Utilized GroupKFold to ensure strict separation of customer data between training and validation sets.
 
-Models:
-1. Logistic Regression (Baseline)
-2. Decision Tree/KNN
-3. Random Forest
+Feature Engineering:
+
+Engineered temporal features describing trend dynamics (e.g., spending velocity, inter-purchase time changes).
+
+Created behavioral indicators (RFM, basket diversity, returns ratio) and aggregated metrics across dynamic time windows.
+
+Results:
+
+Top Performance: The Random Forest model achieved an Average Precision (PR-AUC) of ~0.96 on the Out-of-Time test set, demonstrating exceptional capability in ranking high-risk customers.
+
+Model Comparison: Benchmarked Random Forest against calibrated Logistic Regression and KNN, establishing robustness across linear and non-linear approaches.
+
+Business Output: Delivered a segmented customer list ("High Risk" vs. "Safe") ready for integration with Power BI for actionable reporting.
+
+Technologies: Python, Scikit-learn (Pipeline, Calibration, GridSearchCV), Pandas, NumPy, Matplotlib/Seaborn.
+
+Models Evaluated:
+
+Random Forest (Best Performer, Isotonic Calibrated)
+
+Logistic Regression (Balanced, Sigmoid Calibrated)
+
+K-Nearest Neighbors (KNN)
 
 Authors:
-- Kamil Antkiewicz
-- Marcel Świdziński
+
+Kamil Antkiewicz
+
+Marcel Świdziński
